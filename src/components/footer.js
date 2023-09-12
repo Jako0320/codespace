@@ -34,13 +34,11 @@ const footer = () => {
             <div>
                 <h4>Community</h4>
                 <a href="google.com">GitHub</a>
-                <a href="google.com">Issues</a>
                 <a href="google.com">Twitter</a>
             </div>
             <div>
                 <h4>Help</h4>
                 <a href="google.com">Support</a>
-
                 <a href="google.com">Contact Us</a>
             </div>
             <div>
