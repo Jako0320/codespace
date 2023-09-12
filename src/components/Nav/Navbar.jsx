@@ -1,4 +1,5 @@
 import React from 'react'
+import "./NavbarStyles.css";
 
 
 function Navbar() {
@@ -13,8 +14,20 @@ function Navbar() {
         <div>
           <ul>
             <li>
-              <a href=''></a>
+              <a href='index.html'>Home</a>
             </li>
+            <li>
+              <a href='index.html'>Calendar</a>
+            </li>
+            <li> 
+              <a href='index.html'>Forum</a> 
+            </li>
+            <li> 
+              <a href='index.html'>Donate</a>
+            </li>
+            <li>  
+              <a href='index.html'>Login/Signup</a>
+            </li> 
           </ul>
         </div>
       </nav>

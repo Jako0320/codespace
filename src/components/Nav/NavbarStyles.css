@@ -1,4 +1,4 @@
-.navbar {
+/* .nav {
   position: fixed;
     width: 100vw;
     top: 0;
@@ -9,4 +9,9 @@
     border-bottom: 1px solid #555;
     display: flex;
     align-self: flex-start;
+} */
+
+nav {
+  display: flex;
+  align-items: center;
 }
