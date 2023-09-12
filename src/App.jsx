@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import Nav from './components/Nav/Nav';
 import './App.css'
+import Navbar from './components/Nav/Navbar';
 
 
 function App() {
   return (
     <>
-      <Nav />
+     <Navbar/>
       <h1>Hello World</h1>
     </>
   );
