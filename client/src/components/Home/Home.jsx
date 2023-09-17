@@ -3,9 +3,16 @@ import "./HomeStyles.css";
 
 function Home() {
   return (
-    <div>
+    <>
+      <div className={'section1'}>
+        <img id='section1' src='/spaceBg.jpg'></img>
+        <div className="greeting">Code <br></br>Today</div>
+      </div>
+      <div className='gallery'>
 
-    </div>
+      </div>
+      
+    </>
   )
 }
 
