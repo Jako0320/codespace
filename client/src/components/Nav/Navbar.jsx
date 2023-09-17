@@ -12,7 +12,7 @@ class Navbar extends Component {
     <>
       <nav>
        <a href='index.html'>
-          <img src="public\galaxy.png" id='navLogo'></img>
+          <img src="/galaxy.png" id='navLogo'></img>
        </a>
       <div>
         <h1 id='companyName'>
