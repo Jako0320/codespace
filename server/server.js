@@ -26,6 +26,10 @@ const startApolloServer = async () => {
     context: authMiddleware
   }));
 
+  // mongodb 
+  const MongodbRouter = require('./routes/mongodb/index')
+   app.use('/mongodb',MongodbRouter)
+
   // if we're in production, serve client/build as static assets
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
