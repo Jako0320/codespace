@@ -1,6 +1,9 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
-const userSchema = new mongoose.Schema(
+const eventSchema = require('./Event')
+
+const userSchema = new Schema(
   {
     username: {
       type: String,
@@ -15,6 +18,11 @@ const userSchema = new mongoose.Schema(
       unique: true,
       match: /.+\@.+\..+/,
     },
+
+    password: {
+      type: String,
+      required: true,
+    },
     
     friends: [
       {
@@ -22,28 +30,43 @@ const userSchema = new mongoose.Schema(
       ref: 'User',
       },
     ],
+
+    savedEvents: [eventSchema],
     
-    posts: {},
-    
-    comments: {},
-    
+    savedPosts: {
+      type: String,
+    },
   },
   {
     toJSON: {
       virtuals: true,
     },
-    id: false,
   }
 );
+
+// hash user password
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+// custom method to compare and validate password for logging in
+userSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 
 // Virtual created that retrieves length of the user's friends array
 userSchema
   .virtual('friendCount')
   .get(function () {
-    return `${this.friends.length}`;
-  })
+    return this.friends.length;
+  });
 
 // Initialize User model
-const User = mongoose.model('User', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
