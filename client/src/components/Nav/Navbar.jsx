@@ -24,6 +24,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/social">
+              Social
+            </Link>
+          </li>
+          <li>
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
