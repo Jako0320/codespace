@@ -1,13 +1,58 @@
-import { Component } from 'react';
 import "./NavbarStyles.css";
+import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
 
+function Navbar() {
 
-class Navbar extends Component {
-  state={clicked: false};
-  handleClick = () =>{
-    this.setState({clicked: !this.state.clicked})
+  function showNavigation() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul>
+          <li>
+            <Link to="/post">
+              Post History
+            </Link>
+          </li>
+          <li>
+            <Link to="/forum">
+              Forum
+            </Link>
+          </li>
+          <li>
+            <Link to="/calendar">
+              Calendar
+            </Link>
+          </li>
+          <li>
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+        </ul>
+      );
+    } else {
+      return (
+        <ul>
+          <li>
+            <Link to="/forum">
+              Forum
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup">
+              Signup
+            </Link>
+          </li>
+          <li>
+            <Link to="/login">
+              Login
+            </Link>
+          </li>
+        </ul>
+      );
+    }
   }
-  render(){
+
   return(
     <>
       <nav>
@@ -20,25 +65,9 @@ class Navbar extends Component {
         </h1>
       </div>
 
-        <div>
-          <ul id="navbar" className={this.state.clicked ? '#navbar active' : "#navbar"}>
-            <li>
-              <a className='active' href='index.html'>Home</a>
-            </li>
-            <li>
-              <a href='index.html'>Calendar</a>
-            </li>
-            <li> 
-              <a href='index.html'>Forum</a> 
-            </li>
-            <li> 
-              <a href='index.html'>Donate</a>
-            </li>
-            <li>  
-              <a href='index.html'>Login/Signup</a>
-            </li> 
-          </ul>
-        </div>
+      <nav>
+        {showNavigation()}
+      </nav>
 
         <div id="mobile" onClick={this.handleClick}>
          <i id="bar" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -47,7 +76,6 @@ class Navbar extends Component {
       </nav>
     </>
   )
-}
 }
 
 
