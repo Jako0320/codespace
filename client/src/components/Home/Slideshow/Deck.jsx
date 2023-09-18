@@ -18,7 +18,23 @@ class Deck extends Component {
   }
 
 componentDidMount() {
-  this.number_of_cards_by_index
+  this.number_of_cards_by_index = this.images.children.length -1;
+  this.number_of_cards_by_index = Math.floor(this.number_of_cards_by_index / 2);
+
+  this.order_cards();
+ 
+}
+
+order_cards = () => {
+    const card_width = parseFloat(getComputedStyle(this.images.children[0]).width);
+    let counter_for_right = 1,
+    counter_for_left = this.middle_card_by_index;
+
+    for (let i = 0; i < this.images.children.length; i++) {
+        this.images.children[i].style.transitionDuration = '0.0s';
+    }
+
+    
 }
 
   render() {
