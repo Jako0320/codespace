@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './RightsideStyles.css';
+import './RightsideStyles.css';
 import man from '../../assets/profile2.jpg';
 
 
