@@ -6,48 +6,48 @@ import man from '../../assets/profile2.jpg';
 
 const SuggestedUsers = () => {
     return (
-        <div className={classes.container}>
-            <div className={classes.wrapper}>
-                <div className={classes.myProfile}>
-                    <img src={profileUserImg} className={classes.profileUserImg} alt="" />
-                    <div className={classes.profileData}>
+        <div className="container">
+            <div className="wrapper">
+                <div className="myProfile">
+                    <img src={profileUserImg} className="profileUserImg" alt="" />
+                    <div className="profileData">
                         <span>WebDevMania</span>
-                        <span className={classes.shortBio}>Live is full of adventures</span>
+                        <span className="shortBio">Live is full of adventures</span>
                     </div>
                 </div>
-                <div className={classes.suggestedUsers}>
-                    <h3 className={classes.title}>Recommended users to Follow</h3>
-                    <div className={classes.suggestedUser}>
-                        <img src={man} className={classes.imgUser} alt="" />
-                        <div className={classes.suggestedUserData}>
+                <div className="suggestedUsers">
+                    <h3 className="title">Recommended users to Follow</h3>
+                    <div className="suggestedUser">
+                        <img src={man} className="imgUser" alt="" />
+                        <div className="suggestedUserData">
                             <span>John Doe</span>
-                            <span className={classes.suggestedMsg}>Suggested to you</span>
+                            <span className="suggestedMsg">Suggested to you</span>
                         </div>
-                        <button className={classes.followBtn}>Follow</button>
+                        <button className="followBtn">Follow</button>
                     </div>
-                    <div className={classes.suggestedUser}>
-                        <img src={man} className={classes.imgUser} alt="" />
-                        <div className={classes.suggestedUserData}>
+                    <div className="suggestedUser">
+                        <img src={man} className="imgUser" alt="" />
+                        <div className="suggestedUserData">
                             <span>John Doe</span>
-                            <span className={classes.suggestedMsg}>Suggested to you</span>
+                            <span className="suggestedMsg">Suggested to you</span>
                         </div>
-                        <button className={classes.followBtn}>Follow</button>
+                        <button className="followBtn">Follow</button>
                     </div>
-                    <div className={classes.suggestedUser}>
-                        <img src={man} className={classes.imgUser} alt="" />
-                        <div className={classes.suggestedUserData}>
+                    <div className="suggestedUser">
+                        <img src={man} className="imgUser" alt="" />
+                        <div className="suggestedUserData">
                             <span>John Doe</span>
-                            <span className={classes.suggestedMsg}>Suggested to you</span>
+                            <span className="suggestedMsg">Suggested to you</span>
                         </div>
-                        <button className={classes.followBtn}>Follow</button>
+                        <button className="followBtn">Follow</button>
                     </div>
-                    <div className={classes.suggestedUser}>
-                        <img src={man} className={classes.imgUser} alt="" />
-                        <div className={classes.suggestedUserData}>
+                    <div className="suggestedUser">
+                        <img src={man} className="imgUser" alt="" />
+                        <div className="suggestedUserData">
                             <span>John Doe</span>
-                            <span className={classes.suggestedMsg}>Suggested to you</span>
+                            <span className="suggestedMsg">Suggested to you</span>
                         </div>
-                        <button className={classes.followBtn}>Follow</button>
+                        <button className="followBtn">Follow</button>
                     </div>
                 </div>
             </div>

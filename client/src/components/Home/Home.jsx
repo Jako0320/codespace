@@ -10,9 +10,13 @@ function Home() {
         <img id='section1' src='/spaceBg.jpg'></img>
         <div className="greeting">Code <br></br>Today</div>
       </div>
-      {/* <div className='gallery'>
 
-      </div> */}
+      <div >
+        <img className='gallery' src='/programmers.jpg'></img>
+
+
+
+      </div>
       
     </>
   )

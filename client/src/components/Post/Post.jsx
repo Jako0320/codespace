@@ -17,6 +17,7 @@ const Post = () => {
   };
 
   return (
+
     <div>
       <textarea
         value={content}
