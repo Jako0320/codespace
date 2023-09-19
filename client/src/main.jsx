@@ -6,14 +6,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Post from '../src/components/Post/Post';
-import Forum from '../src/components/Forum/Forum';
+// import Forum from '../src/components/Forum/Forum';
 import Social from '../src/components/Social/Social'
+import Home from '../src/components/Home/Home'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-    error: <NoMatch />,
+    element: <App />,    
     children: [
       {
         index: true, 
@@ -24,13 +24,16 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
-      }, {
-        path: '/forum',
-        element: <Forum />
-      }, {
-        path: '/calendar',
-        element: <Calendar />
-      }, {
+      }, 
+      // {
+      //   path: '/forum',
+      //   element: <Forum />
+      // }, 
+      // {
+      //   path: '/calendar',
+      //   element: <Calendar />
+      // }, 
+      {
         path: '/social',
         element: <Social />
       }, {

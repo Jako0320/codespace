@@ -1,7 +1,7 @@
 import React from 'react';
 import  './SuggestedUsersStyles.css';
-import profileUserImg from '/profile1.jpg';
-import man from '/profile2.jpg';
+import profileUserImg from '../../assets/profile1.jpg';
+import man from '../../assets/profile2.jpg';
 
 
 const SuggestedUsers = () => {

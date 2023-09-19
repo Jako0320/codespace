@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './RightsideStyles.css'
-import man from '/profile2.jpg'
+import classes from './RightsideStyles.css';
+import man from '../../assets/profile2.jpg';
 
 
 const Rightside = () => {

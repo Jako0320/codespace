@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProfileCardStyles.css';
-import profileUserImg from '/profile1.jpg';
+import profileUserImg from '../../assets/profile1.jpg';
 
 
 const ProfileCard = () => {

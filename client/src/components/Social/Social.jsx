@@ -5,7 +5,7 @@ import Rightside from '../rightside/Rightside';
 import SuggestedUsers from '../SuggestedUsers/SuggestedUsers';
 import './SocialStyles.css';
 
-const Home = () => {
+const Social = () => {
   return (
     <div className={classes.container}>
       <div className={classes.left}>

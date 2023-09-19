@@ -74,9 +74,9 @@ function Navbar() {
         {showNavigation()}
       </nav>
 
-        <div id="mobile" onClick={this.handleClick}>
+        {/* <div id="mobile" onClick={this.handleClick}>
          <i id="bar" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-        </div>
+        </div> */}
     
       </nav>
     </>
