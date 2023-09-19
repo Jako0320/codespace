@@ -33,7 +33,7 @@ export const ADD_USER = gql`
 export const CREATE_POST_MUTATION = gql`
   mutation CreatePost($content: String!) {
     createPost(content: $content) {
-      id
+      _id
       content
       author {
         _id

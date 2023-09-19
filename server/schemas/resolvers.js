@@ -6,7 +6,9 @@ const resolvers = {
     getPosts: async () => {
       try {
         // Fetch all posts from the database
-        const posts = await Post.find().sort({ createdAt: -1 });
+        const posts = await Post.find()
+          .populate("author")
+          .sort({ createdAt: -1 });
         return posts;
       } catch (error) {
         throw new Error("Failed to fetch posts");
@@ -15,7 +17,7 @@ const resolvers = {
     getUserPosts: async (_, __, context) => {
       // Check if the user is authenticated
       if (!context.user) {
-        throw new AuthenticationError('User not authenticated');
+        throw new AuthenticationError("User not authenticated");
       }
 
       try {
@@ -25,9 +27,9 @@ const resolvers = {
         });
         return userPosts;
       } catch (error) {
-        throw new Error('Failed to fetch user posts');
+        throw new Error("Failed to fetch user posts");
       }
-    },    
+    },
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({
