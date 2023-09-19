@@ -7,8 +7,10 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Post from '../src/components/Post/Post';
 // import Forum from '../src/components/Forum/Forum';
-import Social from '../src/components/Social/Social'
-import Home from '../src/components/Home/Home'
+import Social from '../src/components/Social/Social';
+import Home from '../src/components/Home/Home';
+import Calendar from '../src/components/Calendar/Calendar';
+import Donate from '../src/components/Donate/Donate';
 
 const router = createBrowserRouter([
   {
@@ -29,13 +31,17 @@ const router = createBrowserRouter([
       //   path: '/forum',
       //   element: <Forum />
       // }, 
-      // {
-      //   path: '/calendar',
-      //   element: <Calendar />
-      // }, 
+      {
+        path: '/calendar',
+        element: <Calendar />
+      }, 
       {
         path: '/social',
         element: <Social />
+      },
+      {
+        path: '/donate',
+        element: <Donate />
       }, {
         path: '/post',
         element: <Post />

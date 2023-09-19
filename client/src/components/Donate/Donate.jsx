@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Stripe from "@stripe/stripe-react-native";
+// import Stripe from "@stripe/stripe-react-native";
+import "./donate.css";
 
-const DonationPage = () => {
+const Donation = () => {
   const [amount, setAmount] = useState(1000);
 
   const handleSubmit = async (event) => {
@@ -53,4 +54,4 @@ const DonationPage = () => {
   );
 };
 
-export default DonationPage;
+export default Donation;

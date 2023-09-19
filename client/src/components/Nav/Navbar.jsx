@@ -29,6 +29,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/donate">
+              Donate
+            </Link>
+          </li>
+          <li>
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
@@ -51,6 +56,11 @@ function Navbar() {
           <li>
             <Link to="/login">
               Login
+            </Link>
+          </li>
+          <li>
+            <Link to="/donate">
+              Donate
             </Link>
           </li>
         </ul>

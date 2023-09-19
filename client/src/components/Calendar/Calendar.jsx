@@ -1,8 +1,10 @@
 // Import React from the React library
 import React from "react";
 
+import "./calendar.css";
+
 // Create a React component called CalendarPage
-const CalendarPage = () => {
+const Calendar = () => {
 
   // Declare a state variable called date to store the current date
   const [date, setDate] = React.useState(new Date());
@@ -73,4 +75,4 @@ const CalendarPage = () => {
 };
 
 // Export the CalendarPage component so that it can be used in other modules
-export default CalendarPage;
+export default Calendar;
