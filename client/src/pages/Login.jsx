@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import decode from 'jwt-decode';
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -15,9 +16,16 @@ function Login(props) {
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-      Auth.login(token);
+      const decodedToken = decode(token);
+      if (decodedToken) {
+        // Token is valid; store it in localStorage
+        Auth.login(token);
+      } else {
+        // Token is not valid; handle the error appropriately
+        console.error('Invalid token received.');
+      }
     } catch (e) {
-      console.log(e);
+      console.error('Error during login:', e);
     }
   };
 

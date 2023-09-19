@@ -5,15 +5,8 @@ const bcrypt = require('bcrypt');
 const eventSchema = require('./Event')
 
 const userSchema = new Schema(
-  {
-    firstName: {
-      type: String,
-      unique: true,
-      required: true,
-      trim: true,
-    },
-
-    lastName: {
+  {    
+    username: {
       type: String,
       unique: true,
       required: true,
@@ -41,9 +34,12 @@ const userSchema = new Schema(
 
     savedEvents: [eventSchema],
     
-    savedPosts: {
-      type: String,
-    },
+    posts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Post',
+      },
+    ],
   },
   {
     toJSON: {
