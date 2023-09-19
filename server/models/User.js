@@ -1,4 +1,5 @@
-const { Schema, model } = require('mongoose');
+const { mongoose, model } = require('mongoose');
+const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
 const eventSchema = require('./Event')
