@@ -25,12 +25,12 @@ const userSchema = new Schema(
       required: true,
     },
     
-    friends: [
-      {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: 'User',
-      },
-    ],
+    // friends: [
+    //   {
+    //   type: mongoose.SchemaTypes.ObjectId,
+    //   ref: 'User',
+    //   },
+    // ],
 
     savedEvents: [eventSchema],
     
@@ -61,11 +61,11 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // Virtual created that retrieves length of the user's friends array
-userSchema
-  .virtual('friendCount')
-  .get(function () {
-    return this.friends.length;
-  });
+// userSchema
+//   .virtual('friendCount')
+//   .get(function () {
+//     return this.friends.length;
+//   });
 
 // Initialize User model
 const User = model('User', userSchema);

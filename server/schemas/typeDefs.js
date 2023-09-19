@@ -4,7 +4,6 @@ const typeDefs = `
         username: String
         email: String
         password: String
-        friends: Int
         savedEvents: [Event]
         savedPosts: String
         # add more here, check models
