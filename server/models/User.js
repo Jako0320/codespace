@@ -6,7 +6,14 @@ const eventSchema = require('./Event')
 
 const userSchema = new Schema(
   {
-    username: {
+    firstName: {
+      type: String,
+      unique: true,
+      required: true,
+      trim: true,
+    },
+
+    lastName: {
       type: String,
       unique: true,
       required: true,

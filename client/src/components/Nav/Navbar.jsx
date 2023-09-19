@@ -57,15 +57,15 @@ function Navbar() {
 
   return (
     <>
-      <nav>
+      <nav className="navbar-container">
         <a href="index.html">
-          <img src="/galaxy.png" id="navLogo"></img>
+          <img src="/galaxy.png" id="navLogo" alt="Company Logo" />
         </a>
         <div>
           <h1 id="companyName">codespace</h1>
         </div>
 
-        <nav>{showNavigation()}</nav>
+        <div className="navigation-container">{showNavigation()}</div>
 
         {/* <div id="mobile" onClick={this.handleClick}>
          <i id="bar" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
