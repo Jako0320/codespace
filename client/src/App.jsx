@@ -11,11 +11,7 @@ function App() {
   return (
     <>
      <Navbar/>
-     <Routes>
-      <Route path='/' element={<Social />}/>
-       {/* <Home/> */}
-       {/* <Deck/> */}
-      </Routes>
+      <Social/>
      {/* <Footer/> */}
 
     </>
