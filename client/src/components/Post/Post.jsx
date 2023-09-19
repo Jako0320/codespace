@@ -1,6 +1,6 @@
 import React from 'react';
 import  './PostStyles.css';
-import profileUserImg from '../../assets/profile1.jpg';
+import profileUserImg from '../../assets/profile1.jpg'
 import {HiOutlineDotsVertical} from 'react-icons/hi'
 import {AiOutlineHeart} from 'react-icons/ai'
 import {BiMessageRounded} from 'react-icons/bi'
