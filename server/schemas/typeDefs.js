@@ -1,7 +1,8 @@
 const typeDefs = `
     type User {
         _id: ID
-        username: String
+        firstName: String
+        lastName: String
         email: String
         password: String
         savedEvents: [Event]
@@ -34,7 +35,7 @@ const typeDefs = `
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!): Auth
+        addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         saveEvent(_id: ID!, eventToSave: EventInput!): User
         removeEvent(_id: ID!, deleteEvent: String!): User
     }`;
