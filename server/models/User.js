@@ -1,19 +1,12 @@
-const { mongoose, model } = require('mongoose');
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
 const eventSchema = require('./Event')
 
 const userSchema = new Schema(
-  {
-    firstName: {
-      type: String,
-      unique: true,
-      required: true,
-      trim: true,
-    },
-
-    lastName: {
+  {    
+    username: {
       type: String,
       unique: true,
       required: true,
@@ -24,7 +17,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: /.+\@.+\..+/,
     },
 
     password: {
@@ -41,9 +33,12 @@ const userSchema = new Schema(
 
     savedEvents: [eventSchema],
     
-    savedPosts: {
-      type: String,
-    },
+    posts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Post',
+      },
+    ],
   },
   {
     toJSON: {
@@ -75,6 +70,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
 //   });
 
 // Initialize User model
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

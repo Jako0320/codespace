@@ -10,6 +10,8 @@ import { setContext } from "@apollo/client/link/context";
 import "./App.css";
 import Navbar from "./components/Nav/Navbar";
 import Footer from "./components/Footer/Footer";
+import { AuthProvider } from "./utils/AuthContext";
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -36,11 +38,13 @@ function App() {
     localStorage.removeItem("id_token");
   }
   return (
-    <ApolloProvider client={client}>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </ApolloProvider>
+    <AuthProvider>
+      <ApolloProvider client={client}>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </ApolloProvider>
+    </AuthProvider>
   );
 }
 

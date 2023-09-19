@@ -30,10 +30,11 @@ module.exports = {
     // verify token and get user data so it can be accessed in the resolver
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      console.log('Token verification successful:', data);
       req.user = data;
-    } catch {
+    } catch (error) {
       console.log('Invalid token');
-      return res.status(400).json({ message: 'invalid token!' });
+      throw new Error('Invalid token');
     }
 
     // return request object to be passed to the resolver as 'context'

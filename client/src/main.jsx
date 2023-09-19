@@ -5,8 +5,8 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Post from '../src/components/Post/Post';
-// import Forum from '../src/components/Forum/Forum';
+import UserPosts from './pages/UserPosts';
+import Forum from './pages/Forum';
 import Social from '../src/components/Social/Social';
 import Home from '../src/components/Home/Home';
 import Calendar from '../src/components/Calendar/Calendar';
@@ -27,10 +27,10 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <Signup />
       }, 
-      // {
-      //   path: '/forum',
-      //   element: <Forum />
-      // }, 
+      {
+        path: '/forum',
+        element: <Forum />
+      }, 
       {
         path: '/calendar',
         element: <Calendar />
@@ -43,8 +43,8 @@ const router = createBrowserRouter([
         path: '/donate',
         element: <Donate />
       }, {
-        path: '/post',
-        element: <Post />
+        path: '/posthistory',
+        element: <UserPosts />
       }
     ]
   }

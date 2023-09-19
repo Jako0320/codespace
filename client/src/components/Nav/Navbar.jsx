@@ -11,7 +11,7 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/post">Post History</Link>
+            <Link to="/posthistory">Post History</Link>
           </li>
           <li>
             <Link to="/forum">Forum</Link>

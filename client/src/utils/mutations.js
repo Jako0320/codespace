@@ -13,14 +13,12 @@ export const LOGIN = gql`
 
 export const ADD_USER = gql`
   mutation addUser(
-    $firstName: String!
-    $lastName: String!
+    $username: String!
     $email: String!
     $password: String!
   ) {
     addUser(
-      firstName: $firstName
-      lastName: $lastName
+      username: $username
       email: $email
       password: $password
     ) {
@@ -28,6 +26,20 @@ export const ADD_USER = gql`
       user {
         _id
       }
+    }
+  }
+`;
+
+export const CREATE_POST_MUTATION = gql`
+  mutation CreatePost($content: String!) {
+    createPost(content: $content) {
+      _id
+      content
+      author {
+        _id
+        username
+      }
+      createdAt
     }
   }
 `;

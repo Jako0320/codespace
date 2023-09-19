@@ -1,13 +1,11 @@
 const typeDefs = `
     type User {
         _id: ID
-        firstName: String
-        lastName: String
+        username: String
         email: String
         password: String
         savedEvents: [Event]
-        savedPosts: String
-        # add more here, check models
+        savedPosts: [Post]
     }
 
     type Event {
@@ -17,6 +15,13 @@ const typeDefs = `
         description: String
     }
 
+    type Post {
+        _id: ID!
+        content: String!
+        author: User!
+        createdAt: String!
+      } 
+
     type Auth {
         token: ID!
         user: User
@@ -24,6 +29,8 @@ const typeDefs = `
 
     type Query {
         me: User
+        getPosts: [Post!]!
+        getUserPosts: [Post!]
     }
 
     input EventInput {
@@ -32,12 +39,12 @@ const typeDefs = `
         description: String!
     }
 
-
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
         saveEvent(_id: ID!, eventToSave: EventInput!): User
         removeEvent(_id: ID!, deleteEvent: String!): User
+        createPost(content: String!): Post
     }`;
 
 module.exports = typeDefs;
