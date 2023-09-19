@@ -1,4 +1,4 @@
-const { mongoose, model } = require('mongoose');
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
@@ -17,7 +17,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: /.+\@.+\..+/,
     },
 
     password: {
@@ -71,6 +70,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
 //   });
 
 // Initialize User model
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

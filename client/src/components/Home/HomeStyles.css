@@ -11,12 +11,12 @@
 
 
 .greeting {
-  margin: 120px 0 0 10px;
-  padding: 10px;
+  margin: 100px 0 100px 10px;
+  padding: 1px;
   width: fit-content;
   position: relative;
   z-index: 99;
-  font-size: 25px;
+  font-size: 150px;
   color: white;
   box-shadow: 0 0 20px 2px black;
   background-color: rgba(0, 0, 0, 0.3);
@@ -59,7 +59,7 @@
   }
 
   .section1 .background_image {
-    height: unset;
+    height: 50%;
     width: 100%;
     min-width: 500px;
   }

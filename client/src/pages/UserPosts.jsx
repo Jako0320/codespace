@@ -1,10 +1,10 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_USER_POSTS_QUERY } from "../utils/queries";
-import { useAuth } from "../utils/AuthContext";
+// import { useAuth } from "../utils/AuthContext";
 
 const UserPosts = () => {
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const { loading, error, data } = useQuery(GET_USER_POSTS_QUERY, {
     variables: { userId: user ? user.userId : null },
   });

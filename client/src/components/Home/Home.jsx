@@ -1,5 +1,7 @@
 import React from "react";
 import "./HomeStyles.css";
+import "./reset.css";
+
 
 function Home() {
   return (
@@ -8,9 +10,9 @@ function Home() {
         <img id='section1' src='/spaceBg.jpg'></img>
         <div className="greeting">Code <br></br>Today</div>
       </div>
-      <div className='gallery'>
+      {/* <div className='gallery'>
 
-      </div>
+      </div> */}
       
     </>
   )

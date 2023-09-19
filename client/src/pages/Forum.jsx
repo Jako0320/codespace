@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_POSTS_QUERY } from '../utils/queries';
 import Post from '../components/Post/Post';
-import { useAuth  } from '../utils/AuthContext';
+// import { useAuth  } from '../utils/AuthContext';
 
 const Forum = () => {
   const { loading, error, data } = useQuery(GET_ALL_POSTS_QUERY);
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const [showCreatePostForm, setShowCreatePostForm] = useState(false);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;

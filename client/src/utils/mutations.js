@@ -36,7 +36,7 @@ export const CREATE_POST_MUTATION = gql`
       id
       content
       author {
-        id
+        _id
         username
       }
       createdAt

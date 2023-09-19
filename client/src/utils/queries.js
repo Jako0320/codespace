@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 export const GET_USER_POSTS_QUERY = gql`
   query GetUserPosts($userId: ID!) {
     getUserPosts(userId: $userId) {
-      id
+      _id
       content
       createdAt
     }
@@ -13,10 +13,10 @@ export const GET_USER_POSTS_QUERY = gql`
 export const GET_ALL_POSTS_QUERY = gql`
   query {
     getPosts {
-      id
+      _id
       content
       author {
-        id
+      _id
         username
       }
       createdAt

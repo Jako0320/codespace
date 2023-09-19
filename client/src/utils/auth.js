@@ -28,16 +28,9 @@ class AuthService {
   }
 
   login(idToken) {
-    // Convert the idToken object to a JSON string
-    const idTokenJSON = JSON.stringify(idToken);
-  
-    // Log the token to check its content
-    console.log('Token before storage:', idTokenJSON);
-  
     // Saves user token to localStorage
-    localStorage.setItem('id_token', idTokenJSON);
-  
-    // Redirect to another page or perform any other action
+    localStorage.setItem('id_token', idToken);
+
     window.location.assign('/');
   }
 
