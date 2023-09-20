@@ -4,7 +4,7 @@
 
 <h2>🚀 Usage</h2>
 
-Access the deployed application [here.](https://codespace-ch-1815939b5de1.herokuapp.com/)
+Access the deployed application [here.](https://codespace-dd0646844d8a.herokuapp.com/)
 
 ![](./assets/images/ss-readme1.png)
 
